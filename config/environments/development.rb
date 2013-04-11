@@ -24,4 +24,7 @@ Sampleapp::Application.configure do
 
   # Debug mode disables concatenation and preprocessing of assets.
   config.assets.debug = true
+
+  # Emberjs setup
+  config.ember.variant = :development
 end
