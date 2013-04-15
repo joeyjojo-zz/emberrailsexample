@@ -1,5 +1,11 @@
 <h1>Application</h1>
+<div class="navigation">
+    <ul>
+        {{#linkTo "index"}}Home{{/linkTo}}
+        {{#linkTo "products"}}Products{{/linkTo}}
+    </ul>
+</div>
+<div class="content">
+    {{outlet}}
+</div>
 
-<p>Your content here.</p>
-
-{{outlet}}
