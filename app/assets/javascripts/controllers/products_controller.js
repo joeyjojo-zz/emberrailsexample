@@ -1,5 +1,5 @@
-App.ContactsController = Em.ArrayController.extend({
-  sortProperties: ['lastName', 'firstName'],
-  activeContactId: null
+App.ProductsController = Em.ArrayController.extend({
+  sortProperties: ['title'],
+  activeProductId: null
 });
 

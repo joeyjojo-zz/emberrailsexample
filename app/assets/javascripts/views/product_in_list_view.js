@@ -1,5 +1,5 @@
-App.ContactInListView = Em.View.extend({
-  templateName: 'contact_in_list',
+App.ProductInListView = Em.View.extend({
+  templateName: 'product_in_list',
   tagName: 'li',
   classNameBindings: 'isActive:active',
 

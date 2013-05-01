@@ -1,2 +1,2 @@
-App.ContactsView = Em.View.extend({
+App.ProductsView = Em.View.extend({
 });
