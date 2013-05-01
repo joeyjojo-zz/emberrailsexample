@@ -1,41 +1,32 @@
-source 'https://rubygems.org'
+source 'http://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.0.beta1'
-
+gem 'rails', '3.2.9'
 gem 'sqlite3'
+gem 'strong_parameters'
 
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-  gem 'sass-rails',   '~> 4.0.0.beta1'
-  gem 'coffee-rails', '~> 4.0.0.beta1'
-
-  # See https://github.com/sstephenson/execjs#readme for more supported runtimes
-  # gem 'therubyracer', platforms: :ruby
-
-  gem 'uglifier', '>= 1.0.3'
+  gem 'sass-rails'
+  gem 'uglifier'
+  gem 'anjlab-bootstrap-rails', '>= 2.1', :require => 'bootstrap-rails'
+  gem 'therubyracer', :platforms => :ruby
 end
 
+gem 'active_model_serializers', github: 'rails-api/active_model_serializers'
 gem 'jquery-rails'
+gem 'ember-rails', github: 'emberjs/ember-rails'
 
-# Turbolinks makes following links in your web application faster. Read more: https://github.com/rails/turbolinks
-# gem 'turbolinks'
+group :test, :development do
+  gem 'minitest'
+  gem 'minitest-rails'
+  gem 'minitest-rails-capybara'
+  gem 'capybara'
+  gem 'konacha'
+  gem 'poltergeist'
+end
 
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder', '~> 1.0.1'
-
-# To use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.0.0'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Deploy with Capistrano
-# gem 'capistrano', group: :development
-
-# To use debugger
-# gem 'debugger'
-
-# Ember.js
-gem "ember-rails"
+group :test do
+  # Pretty printed test output
+  gem 'turn', '~> 0.8.3'
+end
