@@ -6,5 +6,5 @@ App.Router.map(function() {
   this.resource('products', function() {
       this.route('new');
       this.resource('product', {path: ':product_id'});
-  })
+  });
 });
