@@ -1,0 +1,14 @@
+<div class="span3">
+  <div class="well sidebar-nav">
+    <ul class="nav nav-list">
+      <li class="nav-header">All products</li>
+      {{#each product in controller}}
+        {{view App.ProductInListView contentBinding="product"}}
+      {{/each}}
+    </ul>
+  </div>
+</div>
+<div class="span9">
+  {{outlet}}
+</div>
+
