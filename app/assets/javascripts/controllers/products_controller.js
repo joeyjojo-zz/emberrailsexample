@@ -1,5 +1,5 @@
 App.ProductsController = Em.ArrayController.extend({
-  sortProperties: ['title'],
+  sortProperties: ['title', 'description'],
   activeProductId: null
 });
 

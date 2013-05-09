@@ -23,7 +23,7 @@ class ProductsController < ApplicationController
   # PUT /products/1.json
   def update
     product = Product.find(params[:id])
-    if update_product(contact)
+    if update_product(product)
       render json: product, status: :ok
     else
       render json: product.errors, status: :unprocessable_entity
@@ -46,18 +46,18 @@ private
                                     :price)
   end
 
-  def update_product(contact)
+  def update_product(product)
     product_params = permitted_params
 
     # Because updates to the contact and its associations should be atomic,
     # wrap them in a transaction.
     Product.transaction do
-      # Update the contact's own attributes first.
+      # Update the product's own attributes first.
       product.attributes = product_params
       product.save!
     end
 
-    # Important! Reload the contact to ensure that changes to its associations
+    # Important! Reload the product to ensure that changes to its associations
     # (i.e. phone numbers) will be serialized correctly.
     product.reload
 
