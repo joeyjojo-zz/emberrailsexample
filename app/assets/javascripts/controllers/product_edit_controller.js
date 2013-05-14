@@ -2,9 +2,9 @@ App.ProductEditController = Em.ObjectController.extend({
   needs: ['product'],
 
   startEditing: function() {
-    // add the contact and its associated phone numbers to a local transaction
+    // add the product
     var product = this.get('content');
-    var transaction = contact.get('store').transaction();
+    var transaction = product.get('store').transaction();
     transaction.add(product);
     this.transaction = transaction;
   },
