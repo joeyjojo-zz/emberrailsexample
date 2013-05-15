@@ -1,5 +1,8 @@
 <div class="span3">
   <div class="well sidebar-nav">
+    <div>
+        {{#linkTo "products.new" class="btn"}}<i class="icon-plus-sign"></i> Add product{{/linkTo}}
+    </div>
     <ul class="nav nav-list">
       <li class="nav-header">All products</li>
       {{#each product in controller}}
