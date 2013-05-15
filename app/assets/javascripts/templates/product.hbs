@@ -1,9 +1,12 @@
 {{#if controller.isEditing}}
   {{render "productEdit"}}
 {{else}}
-<h2><img {{bindAttr src="image_url"}} />{{title}}</h2>
+<h2>{{title}}</h2>
+
+<img {{bindAttr src="full_image_url"}} />
 
 <dl class="dl-horizontal">
+
   {{#if description}}
     <dt>Description:</dt>
     <dd>{{description}}</dd>
@@ -12,6 +15,7 @@
     <dt>Price:</dt>
     <dd>{{price}}</dd>
   {{/if}}
+
 </dl>
 
 <div class="well well-small">
